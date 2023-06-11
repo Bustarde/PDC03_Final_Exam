@@ -34,8 +34,8 @@ namespace PDC03_Final_Exam.View
                 txtAnimalCode.Text = obj.AnimalCode;
                 txtCharacteristics.Text = obj.Characteristics;
                 txtSpecies.Text = obj.Species;
-                txtHabitat.Text = obj.Habitat;
-                txtThreat.Text = obj.Threat;
+                txtHabitat.SelectedItem = obj.Habitat;
+                txtThreat.SelectedItem = obj.Threat;
                 _isUpdate = true;
             }
         }
@@ -46,8 +46,8 @@ namespace PDC03_Final_Exam.View
             obj.AnimalCode = txtAnimalCode.Text;
             obj.Characteristics = txtCharacteristics.Text;
             obj.Species = txtSpecies.Text;
-            obj.Habitat = txtHabitat.Text;
-            obj.Threat = txtThreat.Text;
+            obj.Habitat = txtHabitat.SelectedItem.ToString();
+            obj.Threat = txtThreat.SelectedItem.ToString();
             if (_isUpdate)
             {
                 obj.Id = animalId;

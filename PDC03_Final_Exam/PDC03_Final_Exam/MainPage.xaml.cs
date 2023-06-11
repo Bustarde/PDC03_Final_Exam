@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PDC03_Final_Exam.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -14,5 +15,13 @@ namespace PDC03_Final_Exam
         {
             InitializeComponent();
         }
+
+        private async void btnViewRecord_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ShowAnimalPage());
+        }
+
+        //AssetManager assets = this.Assets;
+        //Typeface font = Typeface.CreateFromAsset(assets, "TestGeograph-Bold.otf");
     }
 }

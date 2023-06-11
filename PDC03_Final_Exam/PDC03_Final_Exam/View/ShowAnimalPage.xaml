@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PDC03_Final_Exam.View.ShowAnimalPage">
+             x:Class="PDC03_Final_Exam.View.ShowAnimalPage"
+             BackgroundColor="#222222">
     <ContentPage.Content>
-        <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Button Text="Add New Record" x:Name="btnAddRecord"  HorizontalOptions="Start"  Clicked="btnAddRecord_Clicked" />
+        <StackLayout Margin="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -15,17 +16,17 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Text="Animal Code"  FontAttributes="Bold" HorizontalTextAlignment="Start"  Grid.Row="0" Grid.Column="0" />
-                <Label Text="Characteristics" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1" />
-                <Label Text="Species" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2" />
-                <Label Text="Habitat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3" />
-                <Label Text="Threat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="4" />
+                <Label Text="Animal Code" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center"  Grid.Row="0" Grid.Column="0" />
+                <Label Text="Characteristics" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Species" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" />
+                <Label Text="Habitat" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" />
+                <Label Text="Threat" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="4" />
             </Grid>
             <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemSelected" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell >
-                            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Frame BackgroundColor="#222222" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"></RowDefinition>
@@ -35,17 +36,20 @@
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding AnimalCode}" Grid.Row="0" Grid.Column="0" />
-                                    <Label Text="{Binding Characteristics}" Grid.Row="0" Grid.Column="1" />
-                                    <Label Text="{Binding Species}" Grid.Row="0" Grid.Column="2" />
-                                    <Label Text="{Binding Habitat}" Grid.Row="0" Grid.Column="3" />
-                                    <Label Text="{Binding Threat}" Grid.Row="0" Grid.Column="4" />
+                                    <Label Text="{Binding AnimalCode}" FontFamily="{StaticResource RegularFont}" TextColor="White" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding Characteristics}" FontFamily="{StaticResource RegularFont}" TextColor="White" Grid.Row="0" Grid.Column="1" />
+                                    <Label Text="{Binding Species}" FontFamily="{StaticResource RegularFont}" TextColor="White" Grid.Row="0" Grid.Column="2" />
+                                    <Label Text="{Binding Habitat}" FontFamily="{StaticResource RegularFont}" TextColor="White" Grid.Row="0" Grid.Column="3" />
+                                    <Label Text="{Binding Threat}" FontFamily="{StaticResource RegularFont}" TextColor="White" Grid.Row="0" Grid.Column="4" />
                                 </Grid>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <Button Text="Add New Record" BackgroundColor="#ffcc00" CornerRadius="7" FontFamily="{StaticResource BoldFont}" x:Name="btnAddRecord"  HorizontalOptions="FillAndExpand"  Clicked="btnAddRecord_Clicked" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

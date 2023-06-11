@@ -5,13 +5,37 @@
     <ContentPage.Content>
         <StackLayout Margin="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
             <Entry x:Name="txtAnimalCode" Placeholder="Enter Animal Code"/>
-            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics"/>
             <Entry x:Name="txtSpecies" Placeholder="Enter Species"/>
-            <Entry x:Name="txtHabitat" Placeholder="Enter Habitat"/>
-            <Entry x:Name="txtThreat" Placeholder="Enter Threat"/>
+            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics"/>
+            <!--<Entry x:Name="txtHabitat" Placeholder="Enter Habitat"/>-->
+            <Picker x:Name="txtHabitat" Title="Habitat Type"  SelectedItem="{Binding Habitat}">
+                <Picker.Items>
+                    <x:String>Grassland</x:String>
+                    <x:String>Temperate Forest</x:String>
+                    <x:String>Mountain</x:String>
+                    <x:String>Polar</x:String>
+                    <x:String>Desert</x:String>
+                    <x:String>Freshwater</x:String>
+                    <x:String>Rainforest</x:String>
+                    <x:String>Ocean</x:String>
+                </Picker.Items>
+            </Picker>
+            <!--<Entry x:Name="txtThreat" Placeholder="Enter Threat"/>-->
+            <Picker x:Name="txtThreat" Title="Threat Level">
+                <Picker.Items>
+                    <x:String>Near Threatened (NT)</x:String>
+                    <x:String>Vulnerable (VU)</x:String>
+                    <x:String>Endangered (EN)</x:String>
+                    <x:String>Critically Endangered (CR)</x:String>
+                    <x:String>Extinct In The Wild (EW)</x:String>
+                    <x:String>Extinct (EX)</x:String>
+                </Picker.Items>
+            </Picker>
+
 
             <Button Text="Save" Clicked="btnSaveUpdate_Clicked"/>
 
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

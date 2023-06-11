@@ -4,5 +4,14 @@
              x:Class="PDC03_Final_Exam.App">
     <Application.Resources>
 
+        <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+            <On Platform="Android" Value="TestGeograph-Bold.otf#Test Geograph Bold" />
+        </OnPlatform>
+
+        <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont">
+            <On Platform="Android" Value="TestGeograph-Regular.otf#Test Geograph Regular" />
+        </OnPlatform>
+
+
     </Application.Resources>
 </Application>
