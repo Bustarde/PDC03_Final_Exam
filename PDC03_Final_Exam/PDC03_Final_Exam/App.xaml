@@ -4,6 +4,12 @@
              x:Class="PDC03_Final_Exam.App">
     <Application.Resources>
 
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#222222"/>
+            <Setter Property="BarTextColor" Value="#ffcc00"   />
+
+        </Style>
+
         <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
             <On Platform="Android" Value="TestGeograph-Bold.otf#Test Geograph Bold" />
         </OnPlatform>

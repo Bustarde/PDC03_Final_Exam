@@ -17,6 +17,11 @@ namespace PDC03_Final_Exam.Model
         public string Habitat { get; set; }
 
         public string Threat { get; set; }
+        public string Title { get; set; }
+        public string Url { get; set; }
+
     }
+
+
 
 }
