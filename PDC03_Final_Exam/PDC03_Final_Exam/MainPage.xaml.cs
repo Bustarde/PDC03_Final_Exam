@@ -16,16 +16,16 @@ namespace PDC03_Final_Exam
         {
             InitializeComponent();
 
-            List<AnimalModel> images = new List<AnimalModel>()
+            List<ImageModel> images = new List<ImageModel>()
             {
-                new AnimalModel(){Title="Image 1",Url="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg"},
-                new AnimalModel(){Title="Image 2",Url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"},
-                new AnimalModel(){Title="Image 3",Url="https://cdn.pixabay.com/photo/2018/05/17/09/18/away-3408119_1280.jpg"}
+                new ImageModel(){Title="Image 1",Url="https://i.ibb.co/PFtB8Mh/1.png"},
+                new ImageModel(){Title="Image 2",Url="https://i.ibb.co/FXTbT34/2.png"},
+                new ImageModel(){Title="Image 3",Url="https://i.ibb.co/ngSt0Z8/3.png"}
             };
 
             Carousel.ItemsSource = images;
 
-            Device.StartTimer(TimeSpan.FromSeconds(2), (Func<bool>)(() =>
+            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
             {
                 Carousel.Position = (Carousel.Position + 1) % images.Count;
                 return true;
