@@ -5,8 +5,6 @@
              BackgroundColor="#222222">
     <ContentPage.Content>
         <StackLayout Margin="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-
-
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -22,6 +20,7 @@
                 <Label Text="Habitat" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" />
                 <Label Text="Threat" FontFamily="{StaticResource BoldFont}" TextColor="#ffcc00" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="4" />
             </Grid>
+            
             <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemSelected" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -49,7 +48,6 @@
             </ListView>
 
             <Button Text="Add New Record" BackgroundColor="#ffcc00" CornerRadius="7" FontFamily="{StaticResource BoldFont}" x:Name="btnAddRecord"  HorizontalOptions="FillAndExpand"  Clicked="btnAddRecord_Clicked" />
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

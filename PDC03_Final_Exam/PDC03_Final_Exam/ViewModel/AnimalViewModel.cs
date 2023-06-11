@@ -13,14 +13,13 @@ namespace PDC03_Final_Exam.ViewModel
 {
     public class AnimalViewModel
     {
-        //Call Database
-
+        // Call Database
         private DatabaseContext getContext()
         {
             return new DatabaseContext();
         }
 
-        //Insert Records
+        // Insert Records
         public int InsertAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();
@@ -29,7 +28,7 @@ namespace PDC03_Final_Exam.ViewModel
             return c;
         }
 
-        //Retrieve Records
+        // Retrieve Records
         public async Task<List<AnimalModel>> GetAllAnimals()
         {
             var _dbContext = getContext();
@@ -37,7 +36,7 @@ namespace PDC03_Final_Exam.ViewModel
             return res;
         }
 
-        //Delete Records
+        // Delete Records
         public int DeleteAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();
@@ -46,7 +45,7 @@ namespace PDC03_Final_Exam.ViewModel
             return c;
         }
 
-        //Update Records
+        // Update Records
         public async Task<int> UpdateAnimal(AnimalModel obj)
         {
             var _dbContext = getContext();

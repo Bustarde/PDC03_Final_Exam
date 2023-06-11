@@ -20,11 +20,13 @@ namespace PDC03_Final_Exam.View
             InitializeComponent();
             viewModel = new AnimalViewModel();
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
             showAnimal();
         }
+
         private void showAnimal()
         {
             var res = viewModel.GetAllAnimals().Result;

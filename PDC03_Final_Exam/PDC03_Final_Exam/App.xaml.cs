@@ -11,7 +11,6 @@ namespace PDC03_Final_Exam
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
-            //MainPage = new NavigationPage(new View.ShowAnimalPage());
         }
 
         protected override void OnStart()

@@ -4,19 +4,14 @@
              x:Class="PDC03_Final_Exam.MainPage">
 
     <StackLayout BackgroundColor="#222222">
-        <!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>-->
-
         <CarouselView x:Name="Carousel" BackgroundColor="Black" IndicatorView="IndicatorView" HeightRequest="1080">
-
             <CarouselView.ItemTemplate>
-
                 <DataTemplate>
                     <Image Source="{Binding Url}" Aspect="AspectFill"/>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
+
         <Button Text="Learn More" TextColor="#ffcc00" BackgroundColor="White" Margin="15,10,15,10" FontFamily="{StaticResource BoldFont}" CornerRadius="7" HorizontalOptions="FillAndExpand"  Clicked="btnViewRecord_Clicked" />
 
         <IndicatorView x:Name="IndicatorView"
@@ -25,7 +20,5 @@
                 IndicatorSize="0"
                 VerticalOptions="Center" 
                 BackgroundColor="#222222"/>
-
     </StackLayout>
-
 </ContentPage>

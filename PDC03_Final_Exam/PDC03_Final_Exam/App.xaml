@@ -7,7 +7,6 @@
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#222222"/>
             <Setter Property="BarTextColor" Value="#ffcc00"   />
-
         </Style>
 
         <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
@@ -17,7 +16,6 @@
         <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont">
             <On Platform="Android" Value="TestGeograph-Regular.otf#Test Geograph Regular" />
         </OnPlatform>
-
 
     </Application.Resources>
 </Application>

@@ -24,6 +24,7 @@ namespace PDC03_Final_Exam.View
             _viewModel = new AnimalViewModel();
             _isUpdate = false;
         }
+
         public AddAnimal(AnimalModel obj)
         {
             InitializeComponent();
@@ -43,8 +44,6 @@ namespace PDC03_Final_Exam.View
         private async void btnSaveUpdate_Clicked(object sender, EventArgs e)
         {
             AnimalModel obj = new AnimalModel();
-            //var animal = (AnimalModel)BindingContext;
-            //obj.Habitat = (string)txtHabitat.SelectedItem;
             obj.AnimalCode = txtAnimalCode.Text;
             obj.Characteristics = txtCharacteristics.Text;
             obj.Species = txtSpecies.Text;

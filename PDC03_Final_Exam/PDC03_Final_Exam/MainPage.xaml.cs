@@ -25,23 +25,17 @@ namespace PDC03_Final_Exam
 
             Carousel.ItemsSource = images;
 
-            Device.StartTimer(TimeSpan.FromSeconds(5), (Func<bool>)(() =>
+            Device.StartTimer(TimeSpan.FromSeconds(4), (Func<bool>)(() =>
             {
                 Carousel.Position = (Carousel.Position + 1) % images.Count;
                 return true;
             }));
-
         }
 
         private async void btnViewRecord_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ShowAnimalPage());
         }
-
-        //AssetManager assets = this.Assets;
-        //Typeface font = Typeface.CreateFromAsset(assets, "TestGeograph-Bold.otf");
-
-
 
     }
 }
